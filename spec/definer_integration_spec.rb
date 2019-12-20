@@ -3,7 +3,7 @@ require('./app')
 Capybara.app = Sinatra::Application
 set(:show_exceptions, false)
 
-describe('add a a new word', {:type => :feature}) do
+describe('add a new word', {:type => :feature}) do
   it('adds word and returns to word list') do
     visit('/words')
     click_on('Add a new word!')
@@ -12,7 +12,7 @@ describe('add a a new word', {:type => :feature}) do
     expect(page).to have_content('dialectics')
   end
 end
-describe('add a a new definition', {:type => :feature}) do
+describe('add a new definition', {:type => :feature}) do
   it('adds word and returns to word list') do
     visit('/words')
     click_on('dialectics')
@@ -21,7 +21,7 @@ describe('add a a new definition', {:type => :feature}) do
     expect(page).to have_content('fighting words')
   end
 end
-describe('add a a new definition', {:type => :feature}) do
+describe('update a definition', {:type => :feature}) do
   it('adds word and returns to word list') do
     visit('/words')
     click_on('dialectics')
@@ -31,12 +31,20 @@ describe('add a a new definition', {:type => :feature}) do
     expect(page).to have_content("boring words")
   end
 end
-describe('add a a new definition', {:type => :feature}) do
+describe('delete a new definition', {:type => :feature}) do
   it('adds word and returns to word list') do
     visit('/words')
     click_on('dialectics')
     click_on('Edit/Delete')
     click_on('Delete definition!')
     expect(page).to have_content("You have not entered any words yet!")
+  end
+end
+describe('search for word with partial match', {:type => :feature}) do
+  it('adds word and returns to word list') do
+    visit('/words')
+    fill_in('search', :with => "dia")
+    click_on("Search")
+    expect(page).to have_content("dialectics")
   end
 end

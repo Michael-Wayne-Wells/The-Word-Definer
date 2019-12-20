@@ -9,21 +9,20 @@
     </div>
     <div class="card">
       <% if @definitions.any? %>
-      <table>
-        <% @definitions.each do |definition| %>
-        <tr>
-          <%= definition.text %>
-          <form class="" action="/words/<%= @word.id %>/definitions/<%= definition.id %>" method="get">
-            <div class="form-group">
-              <button class="btn btn-dark" type="submit" name="button">Edit/Delete</button>
-            </div>
-          </form>
-        </tr>
-
-        <% end %>
-      </table>
+        <table>
+          <% @definitions.each do |definition| %>
+            <tr>
+              <%= definition.text %>
+              <form class="" action="/words/<%= @word.id %>/definitions/<%= definition.id %>" method="get">
+                <div class="form-group">
+                  <button class="btn btn-dark" type="submit" name="button">Edit/Delete</button>
+                </div>
+              </form>
+            </tr>
+          <% end %>
+        </table>
       <% else %>
-      <p>You have not entered any words yet!</p>
+        <p>You have not entered any words yet!</p>
       <% end %>
     </div>
   </div>

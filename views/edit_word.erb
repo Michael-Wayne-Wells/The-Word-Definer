@@ -1,0 +1,7 @@
+<h2>Edit <%= @word.name %></h2>
+<form action="/words/<%= @word.id() %>/" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <label for="name">edit word</label>
+  <input type="text" name="new_name" id="new_name" value="<%= @definition.text %>">
+  <button class="btn btn-dark" type="submit" name="button">Update!</button>
+</form>

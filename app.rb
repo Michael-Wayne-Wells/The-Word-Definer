@@ -17,6 +17,13 @@ get('/words/new') do
   erb(:new_word)
 end
 
+get('/words/search') do
+  @word = Word.find(params[:id].to_i())
+  search = params[:search]
+  @results = Word.search(search)
+  erb(:search)
+end
+
 get('/words/:id') do
   @word = Word.find(params[:id].to_i())
   @definitions = Definition.find_by_word(@word.id)
@@ -31,7 +38,8 @@ post('/words') do
 end
 
 get('/words/:id/edit') do
-
+@word = Word.find(params[:id].to_i())
+erb(:edit_word)
 end
 
 patch('/words/:id') do
@@ -42,9 +50,6 @@ delete('/words/:id') do
 
 end
 
-get('/words/search') do
-
-end
 
 get('/words/:id/definitions/:def_id') do
   @word = Word.find(params[:id].to_i())

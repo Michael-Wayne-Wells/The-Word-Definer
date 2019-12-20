@@ -35,4 +35,10 @@ class Word
   def delete
     @@words.delete(self.id)
   end
+
+  def update(name)
+    self.name = name
+    @@words[self.id] = Word.new({:name => self.name, :id => self.id})
+  end
+
 end

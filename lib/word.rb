@@ -1,7 +1,20 @@
 class Word
+  attr_reader :id
+  attr_accessor :name
+
   @@words = {}
-  def initialize
+  @@rows = 0
+
+  def initialize(attributes)
+    @name = attributes.fetch(:name)
+    @id = attributes.fetch(:id) || @@rows += 1
   end
+
+  def save
+    @@words[self.id] = Word.new({ :name => self.name, :id => self.id})
+  end
+
+
   def self.all
     @@words.values()
   end

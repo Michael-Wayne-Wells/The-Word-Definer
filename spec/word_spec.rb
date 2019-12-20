@@ -13,7 +13,7 @@ describe(Word) do
       word.save
       word2 = Word.new({:name => "taco", :id => nil})
       word2.save
-      expect(Word.all).to(eq([word1, word2]))
+      expect(Word.all).to(eq([word, word2]))
     end
   end
 end

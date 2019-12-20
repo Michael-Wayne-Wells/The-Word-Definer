@@ -22,4 +22,10 @@ class Word
   def==(to_compare)
     self.name == to_compare.name
   end
+
+  def self.clear
+    @@words = {}
+    @@rows = 0
+
+  end
 end

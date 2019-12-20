@@ -18,4 +18,8 @@ class Word
   def self.all
     @@words.values()
   end
+
+  def==(to_compare)
+    self.name == to_compare.name
+  end
 end

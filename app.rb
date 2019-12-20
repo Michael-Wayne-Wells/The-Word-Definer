@@ -1,38 +1,40 @@
 require('sinatra')
-    require('sinatra/reloader')
-    require('./lib/definer')
-    also_reload('lib/**/*.rb')
-    get('/') do
+require('sinatra/reloader')
+require('./lib/word')
+require('./lib/definition')
+require('pry')
+also_reload('lib/**/*.rb')
 
-    end
-    get('/definer') do
+get('/') do
+  redirect to('/words')
+end
+get('/words') do
 
-    end
+end
 
-    get('/definer/new') do
+get('/words/new') do
 
-    end
+end
 
-    get('/definer/:id') do
+get('/words/:id') do
 
-    end
-    post('/definer') do
+end
+post('/words') do
 
-    end
+end
 
-    get('/definer/:id/edit') do
+get('/words/:id/edit') do
 
-    end
+end
 
-    patch('/definer/:id') do
+patch('/words/:id') do
 
-    end
+end
 
-    delete('/definer/:id') do
+delete('/words/:id') do
 
-    end
+end
 
-    get('/custom_route') do
-
-    end
-    
+get('/words/search') do
+  
+end

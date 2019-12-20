@@ -46,6 +46,4 @@ class Definition
     @@definitions.values().each { |d| definitions.push(d) if d.word_id == word}
     definitions
   end
-
-
 end

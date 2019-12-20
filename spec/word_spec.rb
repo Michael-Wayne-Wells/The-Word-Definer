@@ -48,4 +48,12 @@ describe(Word) do
       expect(Word.all).to(eq([word]))
     end
   end
+  describe('#update') do
+    it('updates a word on the list by the id') do
+      word = Word.new({:name => "steve", :id => nil})
+      word.save
+      word.update("doug")
+      expect(word.name).to(eq("doug"))
+    end
+  end
 end

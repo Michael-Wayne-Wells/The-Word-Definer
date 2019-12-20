@@ -43,11 +43,15 @@ erb(:edit_word)
 end
 
 patch('/words/:id') do
-
+@word = Word.find(params[:id].to_i())
+@word.update(params[:new_name])
+redirect to('/words')
 end
 
 delete('/words/:id') do
-
+@word = Word.find(params[:id].to_i())
+@word.delete
+redirect to('/words')
 end
 
 

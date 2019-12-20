@@ -8,7 +8,7 @@
 </form>
 <form class="" action="/words/<%= @word.id() %>/definitions/<%= @definition.id() %>" method="post">
   <input type="hidden" name="_method" value="delete">
-  <button class="btn btn-dark" type="submit" name="button">Delete definition!</button>
+  <button class="btn btn-danger" type="submit" name="button">Delete definition!</button>
 </form>
 
 <a href="/words/<%= @word.id %>>Take me back!</a>

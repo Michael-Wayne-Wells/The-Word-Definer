@@ -1,4 +1,7 @@
 <h2>Word: <%= @word.name %></h2>
+<form class="" action="/words/<%= @word.id %>/edit" method="get">
+  <button class="btn btn-dark" type="submit" name="button">Edit/Delete word</button>
+</form>
 <div class="row">
   <div class="col">
     <div class="card-header">
@@ -39,5 +42,5 @@
     </div>
   </div>
 </div>
-<a href="/words/<%= @word.id %>/edit">Edit word</a>
+
 <a href="/words">Home</a>

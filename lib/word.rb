@@ -20,12 +20,15 @@ class Word
   end
 
   def==(to_compare)
-    self.name == to_compare.name
+    self.name.eql?(to_compare.name())
   end
 
   def self.clear
     @@words = {}
     @@rows = 0
+  end
 
+  def self.find(id)
+   @@words[id]
   end
 end

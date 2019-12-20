@@ -45,4 +45,9 @@ class Word
     @@words.values().select { | word | word.name.match(/#{term}/i)}
   end
 
+  def self.sort
+    @@words.values().sort_by{ |k,v| k.name}
+  end
+
+
 end

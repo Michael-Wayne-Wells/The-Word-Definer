@@ -56,4 +56,16 @@ describe(Word) do
       expect(word.name).to(eq("doug"))
     end
   end
+
+  describe('.search') do
+  it('searches for stages by name') do
+    word = Word.new({:name => "doug", :id => nil})
+    word.save()
+    word2 = Word.new({:name => "taco steve", :id => nil})
+    word2.save()
+    word3 = Word.new({:name => "taco doug", :id => nil})
+    word3.save()
+    expect(Word.search("Taco")).to(eq([word2, word3]))
+  end
+end
 end

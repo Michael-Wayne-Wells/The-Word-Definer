@@ -38,4 +38,14 @@ describe(Word) do
       expect(Word.find(word2.id)).to(eq(word2))
     end
   end
+  describe('#delete') do
+    it('deletes a word on the list by the id') do
+      word = Word.new({:name => "steve", :id => nil})
+      word.save
+      word2 = Word.new({:name => "taco", :id => nil})
+      word2.save
+      word2.delete
+      expect(Word.all.to(eq([word])))
+    end
+  end
 end

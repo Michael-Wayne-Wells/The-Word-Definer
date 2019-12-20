@@ -1,7 +1,8 @@
 class Word
+  @@words = {}
   def initialize
   end
-  def new()
-
+  def self.all
+    @@words.values()
   end
 end

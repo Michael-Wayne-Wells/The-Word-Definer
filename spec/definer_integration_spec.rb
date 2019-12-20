@@ -19,6 +19,15 @@ describe('add a a new definition', {:type => :feature}) do
     fill_in("new_def", :with => "fighting words")
     click_on('Submit')
     expect(page).to have_content('fighting words')
-
+  end
+end
+describe('add a a new definition', {:type => :feature}) do
+  it('adds word and returns to word list') do
+    visit('/words')
+    click_on('dialectics')
+    click_on('Edit/Delete')
+    fill_in("new_def", :with => "boring words")
+    click_on('Update!')
+    expect(page).to have_content("boring words")
   end
 end

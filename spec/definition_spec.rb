@@ -33,4 +33,15 @@ describe(Definition) do
       expect(Definition.find(definition2.id)).to(eq(definition2))
     end
   end
+  describe('#delete') do
+    it('deletes a definition on the list by the id') do
+      definition = Definition.new({:text => "A cool guy", :word_id => @word.id, :id => nil})
+      definition.save
+      definition2 = Definition.new({:text => "to do something poorly", :word_id => @word.id, :id => nil})
+      definition2.save
+      definition2.delete
+      expect(Definition.all).to(eq([definition]))
+    end
+  end
+
 end

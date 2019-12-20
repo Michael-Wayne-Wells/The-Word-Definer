@@ -62,11 +62,4 @@ describe(Definition) do
       expect(Definition.find_by_word(word2.id)).to(eq([definition2]))
     end
   end
-  describe('#word') do
-    it('finds a word a defintion belongs to') do
-      definition = Definition.new({:text => "A cool guy", :word_id => @word.id, :id => nil})
-      definition.save
-      expect(defintion.word()).to(eq(@word))
-    end
-  end
 end

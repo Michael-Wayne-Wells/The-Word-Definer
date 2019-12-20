@@ -31,3 +31,12 @@ describe('add a a new definition', {:type => :feature}) do
     expect(page).to have_content("boring words")
   end
 end
+describe('add a a new definition', {:type => :feature}) do
+  it('adds word and returns to word list') do
+    visit('/words')
+    click_on('dialectics')
+    click_on('Edit/Delete')
+    click_on('Delete definition!')
+    expect(page).to have_content("You have not entered any words yet!")
+  end
+end

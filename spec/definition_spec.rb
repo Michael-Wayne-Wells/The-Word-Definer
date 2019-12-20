@@ -43,8 +43,8 @@ describe(Definition) do
       expect(Definition.all).to(eq([definition]))
     end
   end
-  describe('#delete') do
-    it('deletes a definition on the list by the id') do
+  describe('#update') do
+    it('updates a definition on the list by the id') do
       definition = Definition.new({:text => "A cool guy", :word_id => @word.id, :id => nil})
       definition.save
       definition.update("a sad boy")
@@ -59,7 +59,7 @@ describe(Definition) do
     definition.save
     definition2 = Definition.new({:text => "enemy of doug", :word_id => word2.id, :id => nil})
     definition2.save
-    expect(Definition.find_by_stage(word2.id)).to(eq([definition2]))
+    expect(Definition.find_by_word(word2.id)).to(eq([definition2]))
   end
 end
 end

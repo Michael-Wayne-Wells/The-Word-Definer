@@ -52,14 +52,21 @@ describe(Definition) do
     end
   end
   describe('.find_by_word') do
-  it('finds definitions by word') do
-    word2 = Word.new({:name => "steve", :id => nil})
-    word2.save
-    definition = Definition.new({:text => "A cool guy", :word_id => @word.id, :id => nil})
-    definition.save
-    definition2 = Definition.new({:text => "enemy of doug", :word_id => word2.id, :id => nil})
-    definition2.save
-    expect(Definition.find_by_word(word2.id)).to(eq([definition2]))
+    it('finds definitions by word') do
+      word2 = Word.new({:name => "steve", :id => nil})
+      word2.save
+      definition = Definition.new({:text => "A cool guy", :word_id => @word.id, :id => nil})
+      definition.save
+      definition2 = Definition.new({:text => "enemy of doug", :word_id => word2.id, :id => nil})
+      definition2.save
+      expect(Definition.find_by_word(word2.id)).to(eq([definition2]))
+    end
   end
-end
+  describe('#word') do
+    it('finds a word a defintion belongs to') do
+      definition = Definition.new({:text => "A cool guy", :word_id => @word.id, :id => nil})
+      definition.save
+      expect(defintion.word()).to(eq(@word))
+    end
+  end
 end

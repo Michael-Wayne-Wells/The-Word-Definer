@@ -1,0 +1,36 @@
+<h2>Welcome!</h2>
+<div class="row">
+  <div class="col">
+    <div class="card-header">
+      <h3>Here are your words:</h3>
+    </div>
+    <div class="card">
+      <% if @words.any? %>
+      <ul>
+        <% @words.each do |word| %>
+        <li><a href="/words/<%= word.id %>"><%= word.name %></a></li>
+        <% end %>
+      </ul>
+      <% else %>
+      <p>You have not entered any words yet!</p>
+      <% end %>
+      <form class="" action="/words/new" method="get">
+        <button class="btn btn-dark" type="submit" name="button">Add a new word!</button>
+      </form>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card-header">
+      <h3>Search for a word:</h3>
+    </div>
+    <div class="card">
+      <form action="/words/search" method="get">
+        <div class="form-group">
+          <label for="search">Search</label>
+          <input id="search" name="search" class="form-control" type="text">
+        </div>
+        <button type="submit" class="btn btn-dark">Search</button>
+      </form>
+    </div>
+  </div>
+</div>

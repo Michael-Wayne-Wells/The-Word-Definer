@@ -9,11 +9,12 @@ get('/') do
   redirect to('/words')
 end
 get('/words') do
-
+  @words = Word.sort
+  erb(:words)
 end
 
 get('/words/new') do
-
+  erb(:new_word)
 end
 
 get('/words/:id') do
@@ -36,5 +37,5 @@ delete('/words/:id') do
 end
 
 get('/words/search') do
-  
+
 end

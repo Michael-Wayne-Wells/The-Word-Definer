@@ -21,7 +21,10 @@ get('/words/:id') do
 
 end
 post('/words') do
-
+  name = params[:word]
+  word = Word.new({:name => name, :id => nil})
+  word.save
+  redirect to('/words')
 end
 
 get('/words/:id/edit') do

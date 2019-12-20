@@ -45,7 +45,7 @@ describe(Word) do
       word2 = Word.new({:name => "taco", :id => nil})
       word2.save
       word2.delete
-      expect(Word.all.to(eq([word])))
+      expect(Word.all).to(eq([word]))
     end
   end
 end

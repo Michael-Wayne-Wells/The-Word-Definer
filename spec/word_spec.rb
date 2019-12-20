@@ -58,7 +58,7 @@ describe(Word) do
   end
 
   describe('.search') do
-  it('searches for stages by name') do
+  it('searches for words by name') do
     word = Word.new({:name => "doug", :id => nil})
     word.save()
     word2 = Word.new({:name => "taco steve", :id => nil})
@@ -66,6 +66,17 @@ describe(Word) do
     word3 = Word.new({:name => "taco doug", :id => nil})
     word3.save()
     expect(Word.search("Taco")).to(eq([word2, word3]))
+  end
+end
+  describe('.sort') do
+  it('searches for words by name') do
+    word = Word.new({:name => "doug", :id => nil})
+    word.save()
+    word2 = Word.new({:name => "taco steve", :id => nil})
+    word2.save()
+    word3 = Word.new({:name => "taco doug", :id => nil})
+    word3.save()
+    expect(Word.sort).to(eq([word, word3, word2]))
   end
 end
 end

@@ -31,4 +31,9 @@ class Definition
     @@defintions[id]
   end
 
+  def delete
+    @@defintions.delete(self.id)
+  end
+
+
 end

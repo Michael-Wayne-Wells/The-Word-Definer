@@ -35,5 +35,10 @@ class Definition
     @@defintions.delete(self.id)
   end
 
+  def update(text)
+    self.text = text
+    @@defintions[self.id] = Definition.new({:text => self.text, :id => self.id})
+  end
+
 
 end

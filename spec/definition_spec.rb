@@ -47,8 +47,8 @@ describe(Definition) do
     it('deletes a definition on the list by the id') do
       definition = Definition.new({:text => "A cool guy", :word_id => @word.id, :id => nil})
       definition.save
-      defintion.update("a sad boy")
-      expect(defintion.text).to(eq("a sad boy"))
+      definition.update("a sad boy")
+      expect(definition.text).to(eq("a sad boy"))
     end
   end
 end

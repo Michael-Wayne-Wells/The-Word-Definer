@@ -27,4 +27,8 @@ class Definition
     @@rows = 0
   end
 
+  def self.find(id)
+    @@defintions[id]
+  end
+
 end

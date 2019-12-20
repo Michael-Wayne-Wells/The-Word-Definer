@@ -14,7 +14,6 @@ class Word
     @@words[self.id] = Word.new({ :name => self.name, :id => self.id})
   end
 
-
   def self.all
     @@words.values()
   end
@@ -48,6 +47,5 @@ class Word
   def self.sort
     @@words.values().sort_by{ |k,v| k.name}
   end
-
 
 end

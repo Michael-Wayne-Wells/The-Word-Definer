@@ -1,0 +1,49 @@
+h1 {
+
+  font-size: 75px;
+
+}
+h2, h3 {
+  font-family: arial;
+  font-weight: bold;
+}
+ .main_content {
+   border: 2px solid black;
+   padding: 15px;
+   border-radius: 5px;
+   background-color: #D9DCD6;
+ }
+ body {
+   font-size: 20px;
+   font-family: arial;
+   /* background-color: #D9DCD6; */
+ }
+
+ .card {
+   padding: 10px;
+   border: 2px solid black;
+   background-color: #D9DCD6;
+    border-radius: 5px;
+
+ }
+
+ .card-header {
+   color: #D9DCD6;
+   background-color: #16425B;
+   border: 2px solid black;
+   border-radius: 5px;
+ }
+.title-panel {
+  text-align: center;
+  font-family: impact;
+  margin-left: 7%;
+  margin-right: 7%;
+  background-color: #16425B;
+  color: #DBE7EE;
+  width: 86%;
+  border-radius: 10px;
+  height: 200px;
+  padding: 20px;
+  margin-bottom: 20px;
+
+}

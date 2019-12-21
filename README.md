@@ -1,47 +1,45 @@
+# _definer_
 
-  # _definer_
+#### _short description _
 
-  #### _short description _
+#### By _**name**_
 
-  #### By _**name**_
+## Description
 
-  ## Description
+_ _
 
-  _ _
+|Behavior|Input|Output|
+|---|---|---|
+|   |   |   |
+|   |   |   |
+|   |   |   |
 
-  |Behavior|Input|Output|
-  |---|---|---|
-  |   |   |   |
-  |   |   |   |
-  |   |   |   |
+## Setup/Installation Requirements
 
-  ## Setup/Installation Requirements
-
-  * _Launch <https://url.io/(---------)> in your browser._
-  ### OR ###
-  * clone and open the file locally
-  * _in terminal run:_
-  >$git clone https://url/(------).git
-  * _open index.html in your browser._
-
+* _Launch <https://url.io/(---------)> in your browser._
+### OR ###
+* clone and open the file locally
+* _in terminal run:_
+>$git clone https://url/(------).git
+* _open index.html in your browser._
 
 
-  ## Known Bugs
 
-  _No known bugs_
+## Known Bugs
 
-  ## Support and contact details
+_No known bugs_
 
-  _If you have any issues with the program or want to reach out, email ['mwells1286@gmail.com](href='mailto:email@email.com')_
+## Support and contact details
 
-  ## Technologies Used
+_If you have any issues with the program or want to reach out, email ['mwells1286@gmail.com](href='mailto:email@email.com')_
 
-  _This program utilized:_
-  * _RUBY_
-  _and was built on Atom_
-  ### License
+## Technologies Used
 
-  *Licensed under MIT license*
+_This program utilized:_
+* _RUBY_
+_and was built on Atom_
+### License
 
-  Copyright (c) 2019 **_name_**
-  
+*Licensed under MIT license*
+
+Copyright (c) 2019 **_name_**

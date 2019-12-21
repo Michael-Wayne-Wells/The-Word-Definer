@@ -1,4 +1,2 @@
-
-  #!/usr/bin/ruby
-  require('./lib/definer')
-  
+#!/usr/bin/ruby
+require('./lib/definer')

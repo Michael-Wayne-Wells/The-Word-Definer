@@ -6,13 +6,13 @@
     </div>
     <div class="card">
       <% if @words.any? %>
-      <ul>
-        <% @words.each do |word| %>
-        <li><a href="/words/<%= word.id %>"><%= word.name %></a></li>
-        <% end %>
-      </ul>
+        <ul>
+          <% @words.each do |word| %>
+            <li><a href="/words/<%= word.id %>"><%= word.name %></a></li>
+          <% end %>
+        </ul>
       <% else %>
-      <p>You have not entered any words yet!</p>
+        <p>You have not entered any words yet!</p>
       <% end %>
       <form class="" action="/words/new" method="get">
         <button class="btn btn-dark" type="submit" name="button">Add a new word!</button>

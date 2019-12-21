@@ -45,5 +45,6 @@ h2, h3 {
   height: 200px;
   padding: 20px;
   margin-bottom: 20px;
+  text-transform: uppercase;
 
 }
